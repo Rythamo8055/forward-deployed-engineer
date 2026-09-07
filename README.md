@@ -64,26 +64,26 @@ Blog cites BLS 2023: Computer/Info Research Scientists ~$145k median, Data Scien
 
 ## 3. Master Table: Required Skills → Real-World Projects → Certificates
 
-This is our job-readiness tracker. Check off as we build.
+> **GitHub audit 2026-09-07 via `gh` (80 repos scanned): 5x DONE, 2x DOING, 3x TODO. Evidence links below. Source of truth = this table. Pages dashboard mirrors it.**
 
-| # | Required Skill (from blog) | What to Learn | Real-World Project to Build (for portfolio) | Certificate to Get | Status |
+| # | Required Skill (from blog) | What to Learn | Real-World Project — Plan vs YOUR Evidence | Certificate to Get (free-first for students) | Status |
 |---|----------------------------|---------------|--------------------------------------------|--------------------|--------|
-| 1 | Full-Stack Software Engineering Fundamentals | Python, TypeScript, APIs, Git, testing, system design | Customer Co-Build Starter: Full-stack internal tool (e.g., support ticket triage app) deployed in Docker + CI/CD | Meta Full-Stack / IBM Full Stack (Coursera) OR AWS Certified Developer - Associate | ⬜ Todo |
-| 2 | Applied AI/LLM: Fine-tuning | HuggingFace, LoRA/QLoRA, OpenAI fine-tune API | Fine-tune a small model (e.g., Llama 3 / Mistral) on customer-like domain data (e.g., farm manuals à la John Deere example) + eval report | HuggingFace Course Cert / OpenAI + DeepLearning.AI Fine-tuning | ⬜ Todo |
-| 3 | RAG Systems | Embeddings, vector DB (pgvector/Pinecone/Chroma), chunking, LangChain/LlamaIndex | RAG over messy PDFs/CSVs (e.g., NFL rulebook + tickets, or factory SOPs) with citations + evals | DeepLearning.AI LangChain / Vector DBs (Short Courses) + AWS Certified ML - Specialty | ⬜ Todo |
-| 4 | Evals + LLM Deployment | Prompt evals, RAGAS, guardrails, latency/cost tradeoffs, Realtime API | Add eval harness to Project #3: accuracy, hallucination rate, latency dashboard. Deploy via FastAPI + vLLM/Bedrock | OpenAI Evals / Confident AI DeepEval practice + Azure AI Engineer Associate (AI-102) | ⬜ Todo |
-| 5 | Data Engineering (Data is the moat) | SQL, ETL, dbt, Spark, data cleaning for siloed enterprise data | Siloed-Data Unifier: Ingest 3 messy sources (SQL + CSV + API) → clean warehouse + docs. Show before/after data quality | Databricks Certified Data Engineer Associate / Google Professional Data Engineer | ⬜ Todo |
-| 6 | Cloud Infra + Security (regulated: finance/health/gov) | AWS/Azure, IAM, VPC, secrets, HIPAA/SOC2 basics | Deploy Project #3 on AWS with IAM, VPC, Secrets Manager, logging. Threat-model doc for healthcare/finance variant | AWS Solutions Architect Associate + AWS Security Specialty OR Microsoft AZ-104 + SC-100 basics | ⬜ Todo |
-| 7 | Rapid Prototyping (PoC in days) | v0/Lovable/Replit + Cursor, Streamlit/Gradio, Idea Shop mindset | 48-hour Prototype Sprint: Ship working PoC in front of a "customer" (friend/mock) + demo video + feedback loop | N/A — proof is demo video + GitHub (IPRO-style Innovation Day) | ⬜ Todo |
-| 8 | Communication + Writing | Tech specs, PRDs, architecture decision records (ADRs) | Write 1-pager + ADR + demo script for every project above. Publish in `/docs` | N/A — portfolio docs (or Google Technical Writing course) | ⬜ Todo |
-| 9 | Listening / Empathy / User-Centric Loops | User interviews, DORA user-centric focus, tight feedback loops | Factory-Floor Simulation (Matta-style): Interview 2-3 real users, map process, iterate 2 versions based on feedback log | N/A — feedback log artifact / IDEO Design Thinking cert (optional) | ⬜ Todo |
-| 10 | Systems Thinking + Ambiguity + Business Sense (ROI) | Adoption, retention, ROI modeling, scoping vague needs | Ramp-Pod Simulation: Pick one customer, own KPI (e.g., reduce support time 30%). Track baseline → shipped → measured ROI doc | AWS Cloud Practitioner (business fluency) + Product / Scrum (PSM I or Pragmatic) optional | ⬜ Todo |
+| 1 | Full-Stack Software Engineering Fundamentals | Python, TypeScript, APIs, Git, testing, system design | Plan: ticket-triage app + Docker + CI/CD<br>**✅ DONE: [aegis-support-copilot](https://github.com/Rythamo8055/aegis-support-copilot) (LangGraph+Streamlit+SQLite, 12 commits) + [docuqa-rag](https://github.com/Rythamo8055/docuqa-rag) (FastAPI+Next.js, 33 commits, live demo) + [cognodb-graphlink](https://github.com/Rythamo8055/cognodb-graphlink) (FastAPI+Cypher) + snip-url-shortener/shipgraph/cafe** | FREE: freeCodeCamp Full-Stack, Full Stack Open (free cert) / Paid later: Meta/IBM Coursera ($59/mo) OR AWS Developer Assoc $150 | 🟩 Done |
+| 2 | Applied AI/LLM: Fine-tuning | HuggingFace, LoRA/QLoRA, OpenAI fine-tune API | Plan: Fine-tune Llama/Mistral on domain docs + eval report<br>**⚠️ GAP: [needle](https://github.com/Rythamo8055/needle) uses pretrained 45M tiny model (no training run). Need 1x Colab LoRA + eval report** | FREE: HuggingFace LLM Course + Agents Course (free cert) / DeepLearning.AI shorts free | ⬜ Todo |
+| 3 | RAG Systems | Embeddings, vector DB (pgvector/Pinecone/Chroma), chunking, LangChain/LlamaIndex | Plan: RAG over PDFs/CSVs + citations + evals<br>**✅ DONE: [docuqa-rag](https://github.com/Rythamo8055/docuqa-rag) (parent-child 800/300, MiniLM, Chroma, Hybrid BM25+vector RRF + rerank, 54 tests, 27/28 stress 96%) + [aegis](https://github.com/Rythamo8055/aegis-support-copilot) (Chroma 12-doc + citation filter) + [breachkit](https://github.com/Rythamo8055/breachkit-redteam-lab) (48-doc corpus) + GraphRAG in cognodb** | FREE: DeepLearning.AI LangChain/RAG shorts free / Paid later: AWS ML Engineer Assoc $150 | 🟩 Done |
+| 4 | Evals + LLM Deployment | Prompt evals, RAGAS, guardrails, latency/cost tradeoffs, Realtime API | Plan: eval harness + FastAPI deploy<br>**✅ DONE: [aegis](https://github.com/Rythamo8055/aegis-support-copilot) (60 golden tickets: triage 86.7%, escalation 81.7%, 0 grounding viol, CI blocks >2pts, 36 tests) + [breachkit](https://github.com/Rythamo8055/breachkit-redteam-lab) (14 probes 100%→0% stub, 23%→0% live gpt-oss-20b, CI gate) + [docuqa](https://github.com/Rythamo8055/docuqa-rag) (10/10 eval) + [genar-ai-safety-reporting](https://github.com/Rythamo8055/genar-ai-safety-reporting) (LLM-as-Judge + verifier)** | FREE: DeepEval practice + MS Learn AI-102 path free / Paid later: Azure AI-102 $165 (or free voucher via Skills Fest) | 🟩 Done |
+| 5 | Data Engineering (Data is the moat) | SQL, ETL, dbt, Spark, data cleaning for siloed enterprise data | Plan: 3 sources → warehouse + quality docs<br>**🟨 DOING: [genar-ai-safety-reporting](https://github.com/Rythamo8055/genar-ai-safety-reporting) (Pandas 1068→1024 dedup + evidence packets) + [cognodb-graphlink](https://github.com/Rythamo8055/cognodb-graphlink) (3-domain graph modeling). Missing: SQL+dbt/Spark warehouse** | FREE: Databricks Academy Fundamentals badges free + Kaggle SQL free / Paid later: Databricks Assoc $200 | 🟨 Doing |
+| 6 | Cloud Infra + Security (regulated: finance/health/gov) | AWS/Azure, IAM, VPC, secrets, HIPAA/SOC2 basics | Plan: AWS IAM/VPC/Secrets/logging + threat model<br>**🟨 DOING: [breachkit](https://github.com/Rythamo8055/breachkit-redteam-lab) (OWASP LLM Top10, guardrails, live Streamlit+Cloudflare demo) + [lolak-solutions-security-audit](https://github.com/Rythamo8055/lolak-solutions-security-audit). Missing: AWS IAM/VPC prod deploy** | FREE: AWS Skill Builder free + Student Rewards (21 badges = free $100 voucher) + Azure for Students $100 credit / Paid later: AWS SAA $150, Security $300 | 🟨 Doing |
+| 7 | Rapid Prototyping (PoC in days) | v0/Lovable/Replit + Cursor, Streamlit/Gradio, Idea Shop mindset | Plan: 48h PoC + demo video<br>**✅ DONE: [needle](https://github.com/Rythamo8055/needle) (Tauri Rust 17 tools, 25 commits) + [GEMINI-3-HACKATHON](https://github.com/Rythamo8055/GEMINI-3-HACKATHON) (interview platform, 7 commits) + live Streamlit demos** | N/A — demo video + GitHub = proof | 🟩 Done |
+| 8 | Communication + Writing | Tech specs, PRDs, architecture decision records (ADRs) | Plan: 1-pager + ADR per project in `/docs`<br>**✅ DONE: aegis `PLAN.md`+`DEVLOG.md`, breachkit `RED_TEAM_REPORT.md`+JSON scorecards, genar PADER/PSUR regulatory reports** | FREE: Google Technical Writing free | 🟩 Done |
+| 9 | Listening / Empathy / User-Centric Loops | User interviews, DORA user-centric focus, tight feedback loops | Plan: 2-3 interviews, 2 iterations + log<br>**⚠️ GAP: no interview/feedback logs yet. Add `docs/feedback-log.md` to aegis** | FREE: IDEO acumen free articles / feedback log artifact | ⬜ Todo |
+| 10 | Systems Thinking + Ambiguity + Business Sense (ROI) | Adoption, retention, ROI modeling, scoping vague needs | Plan: own KPI (↓support 30%) + ROI doc<br>**⚠️ GAP: no KPI/ROI doc yet. Add `docs/ROI.md` to aegis (baseline→shipped→measured)** | FREE: AWS Cloud Practitioner Learn path free / Paid later: PSM I $200 opt | ⬜ Todo |
 
-### Minimal Certificate Shortlist (if you want jobs fast)
-1. **AWS Certified Solutions Architect – Associate** (cloud + deployment credibility)
-2. **AWS Certified Machine Learning – Specialty** OR **Azure AI Engineer Associate (AI-102)** (applied AI/RAG/evals)
-3. **Databricks Data Engineer Associate** OR **Google Professional Data Engineer** (data = edge)
-4. Plus portfolio > certs: recruiters in 2026 say **"doing the job before you get the job"** — 3-4 production-ready projects beat 10 certs.
+### Minimal Certificate Shortlist (free-first — you are broke final-year, $0 now)
+1. **$0 now:** HuggingFace Agents (free cert) + DeepLearning.AI shorts free + AWS Skill Builder free + MS Learn AI-102 path free + Databricks Fundamentals badges free + freeCodeCamp
+2. **Free voucher hunt:** AWS Builder Student Rewards (21 badges = free $100 Foundational voucher) + Microsoft Skills Fest / Ignite challenge (100% off AI-102) + GitHub Student Pack (Azure $100, MongoDB free cert)
+3. **Pay later only:** **AWS SAA $150** + **Azure AI-102 $165** + **Databricks Assoc $200** = ~$515 total. Portfolio > certs.
+4. Plus portfolio > certs: recruiters in 2026 say **"doing the job before you get the job"** — you already have 5 DONE projects, that beats 10 certs.
 
 ## 4. Dev Log — What We Are Doing & What Happened in Sessions
 
@@ -91,9 +91,10 @@ This is our job-readiness tracker. Check off as we build.
 
 | Date | Session # | What We Planned | What We Did | Key Learnings / Links | Next Up |
 |------|-----------|-----------------|-------------|-----------------------|---------|
+| 2026-09-07 | S03 | Audit GitHub via gh, mark DONE | Scanned 80 repos, mapped aegis/breachkit/docuqa/needle/cognodb/genar to 10 skills: 5 Done, 2 Doing, 3 Todo. Updated README + Pages with evidence links | Strongest: eval-gated CI (60 golden, 14 probes, Ragas 0.982). Gaps: LoRA fine-tune, AWS IAM/VPC, ROI/feedback logs | 1x free LoRA Colab + add docs/ROI.md + docs/feedback-log.md to aegis, claim 2 free badges |
 | 2026-09-07 | S02 | Push to GitHub + Pages tracker | Created public repo, pushed 5 files, enabled Pages (legacy/main-root), set homepage, verified 200 live | Pages build `built` in ~1min; live dashboard persists ticks via localStorage | Pick Project #1 stack, scaffold `/projects/01-fullstack-starter` |
 | 2026-09-07 | S01 | Repo setup + analyze IIT FDE blog | Created this README, added weblink, extracted skills/projects/certs table, initialized dev log | FDE = 1 customer x many capabilities; AI easy to demo hard to deploy; 95% pilots fail | Pick Project #1 stack, create `/projects/01-fullstack-starter` + `/docs` |
-| YYYY-MM-DD | S03 | _template - copy this row_ | | | |
+| YYYY-MM-DD | S04 | _template - copy this row_ | | | |
 
 ### How to use this log
 - `What We Planned` = goal before session
@@ -103,12 +104,12 @@ This is our job-readiness tracker. Check off as we build.
 
 ## 5. Roadmap (suggested order)
 
-- [ ] Phase 0: Setup — README + `/projects` + `/docs` + `/certs` folders
-- [ ] Phase 1: Full-stack + Cloud deploy (Skills 1,6,8)
-- [ ] Phase 2: Data pipeline (Skill 5)
-- [ ] Phase 3: RAG + Evals + Fine-tune (Skills 2,3,4)
-- [ ] Phase 4: 2x Customer simulations with ROI docs (Skills 7,9,10)
-- [ ] Phase 5: Cert exam (pick 1 cloud + 1 AI) + resume with metrics
+- [x] Phase 0: Setup — README + `/projects` + `/docs` + `/certs` folders + Pages live
+- [x] Phase 1a: Full-stack + RAG + Evals (Skills 1,3,4,7,8) — DONE via aegis/breachkit/docuqa/genar
+- [ ] Phase 1b: Cloud prod deploy — AWS IAM/VPC/Secrets for docuqa (Skill 6 gap)
+- [ ] Phase 2: Data warehouse ETL (Skill 5 gap) + LoRA fine-tune + eval report (Skill 2 gap)
+- [ ] Phase 3: Customer sims — add `docs/feedback-log.md` + `docs/ROI.md` to aegis (Skills 9,10 gaps)
+- [ ] Phase 4: Free badges (2x) + voucher hunt + resume with metrics (triage 86.7%, probes 100%→0%, Ragas 0.982)
 
 ## 6. Folder Plan
 

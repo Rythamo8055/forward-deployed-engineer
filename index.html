@@ -83,8 +83,8 @@ code{background:#0b1530;padding:2px 6px;border-radius:6px;border:1px solid var(-
 </div>
 
 <div class="card" id="tracker" style="margin-top:16px">
-<h2>🎯 Master Tracker — Skills → Projects → Certificates</h2>
-<p class="muted">Tick = saved in this browser (localStorage). Source of truth stays in <code>README.md</code> — update both each session. Filter by status:</p>
+<h2>🎯 Master Tracker — Skills → Projects → Certificates (audited 2026-09-07)</h2>
+<p class="muted">GitHub audit: 80 repos scanned. <b>5 Done, 2 Doing, 3 Todo.</b> Ticks saved in browser. Source of truth = <code>README.md</code>. Evidence links = your repos.</p>
 <div class="toolbar">
 <input id="q" placeholder="Search skill / project / cert..." oninput="render()" style="flex:1;min-width:200px" />
 <select id="f" onchange="render()"><option value="">All status</option><option>Todo</option><option>Doing</option><option>Done</option></select>
@@ -102,13 +102,13 @@ code{background:#0b1530;padding:2px 6px;border-radius:6px;border:1px solid var(-
 
 <div class="grid" style="margin-top:16px">
 <div class="card">
-<h2>🏆 Minimal Cert Shortlist</h2>
+<h2>🏆 Certs — free-first ($0 now)</h2>
 <ol>
-<li><b>AWS Solutions Architect – Associate</b> — cloud + deploy</li>
-<li><b>AWS ML Specialty</b> OR <b>Azure AI-102</b> — RAG / evals / LLM</li>
-<li><b>Databricks Data Engineer Assoc.</b> OR <b>GCP Data Engineer</b> — data is moat</li>
+<li><b>FREE now:</b> HF Agents cert + DL.AI shorts + AWS Skill Builder + MS Learn + Databricks Fundamentals</li>
+<li><b>Free vouchers:</b> AWS Student 21 badges = $100 voucher, MS Skills Fest = 100% off AI-102</li>
+<li><b>Pay later:</b> AWS SAA $150 + AI-102 $165 + Databricks $200</li>
 </ol>
-<p class="muted">Portfolio &gt; certs: 3-4 production-ready builds beat 10 certs.</p>
+<p class="muted">You have 5 DONE projects — that beats certs. Evidence above.</p>
 </div>
 <div class="card">
 <h2>🗺️ Roadmap</h2>
@@ -125,8 +125,9 @@ code{background:#0b1530;padding:2px 6px;border-radius:6px;border:1px solid var(-
 <table>
 <thead><tr><th>Date</th><th>Session</th><th>Planned</th><th>Did</th><th>Learnings / Links</th><th>Next</th></tr></thead>
 <tbody>
-<tr><td>2026-09-07</td><td>S01</td><td>Repo setup + analyze IIT blog</td><td>Created README + Pages dashboard, added weblink, skills/projects/certs table, dev log</td><td>FDE=1 cust×many caps; 95% pilots fail; demo≠deploy</td><td>Pick P01 stack, scaffold /projects/01</td></tr>
-<tr><td>YYYY-MM-DD</td><td>S02</td><td><i>template — copy row</i></td><td></td><td></td><td></td></tr>
+<tr><td>2026-09-07</td><td>S03</td><td>Audit GitHub via gh</td><td>80 repos scanned: 5 Done, 2 Doing, 3 Todo. README+Pages updated with evidence</td><td>Best: 60 golden, 14 probes, Ragas 0.982. Gaps: LoRA, IAM/VPC, ROI logs</td><td>Free LoRA + ROI.md + 2 free badges</td></tr>
+<tr><td>2026-09-07</td><td>S02</td><td>Push + Pages</td><td>Repo public, Pages 200 live, homepage set</td><td>Build built ~1min</td><td>Pick P01 stack</td></tr>
+<tr><td>2026-09-07</td><td>S01</td><td>Setup + IIT blog</td><td>README + dashboard + dev log</td><td>FDE=1 cust×many caps; 95% fail</td><td>Pick P01</td></tr>
 </tbody>
 </table>
 </div>
@@ -136,21 +137,22 @@ code{background:#0b1530;padding:2px 6px;border-radius:6px;border:1px solid var(-
 </div>
 <script>
 const DATA=[
-[1,"Full-Stack SWE Fundamentals","Customer Co-Build Starter: ticket-triage app, Docker + CI/CD","Meta Full-Stack / AWS Developer Assoc."],
-[2,"Applied AI: Fine-tuning","Fine-tune Llama/Mistral on domain docs (John Deere-style) + eval report","HF Course / DeepLearning.AI Fine-tuning"],
-[3,"RAG Systems","RAG over PDFs/CSVs (NFL rules / factory SOPs) + citations","DeepLearning.AI LangChain + AWS ML Specialty"],
-[4,"Evals + LLM Deploy","Eval harness: accuracy/hallucination/latency, FastAPI + Bedrock/vLLM","Azure AI-102 + DeepEval practice"],
-[5,"Data Engineering","Siloed-Data Unifier: 3 sources → warehouse + quality docs","Databricks Assoc. / GCP Data Engineer"],
-[6,"Cloud + Security","Deploy RAG on AWS: IAM/VPC/Secrets/logging + threat model","AWS SAA + Security Specialty"],
-[7,"Rapid Prototyping","48-h Sprint: PoC + demo video + feedback loop","Demo video = cert"],
-[8,"Communication/Writing","1-pager + ADR + demo script per project in /docs","Google Tech Writing"],
-[9,"Listening / User loops","Factory-floor sim: 2-3 interviews, 2 iterations + log","IDEO Design Thinking (opt)"],
-[10,"Systems + Business ROI","Ramp-pod sim: own KPI (↓support 30%), ROI doc","AWS CP + PSM I (opt)"],
+[1,"Full-Stack SWE Fundamentals","✅ <a href='https://github.com/Rythamo8055/aegis-support-copilot' target='_blank'>aegis</a> + <a href='https://github.com/Rythamo8055/docuqa-rag' target='_blank'>docuqa-rag (live)</a> + <a href='https://github.com/Rythamo8055/cognodb-graphlink' target='_blank'>cognodb</a>","freeCodeCamp (free) / AWS Dev $150","Done"],
+[2,"Applied AI: Fine-tuning","⚠️ GAP: <a href='https://github.com/Rythamo8055/needle' target='_blank'>needle</a> uses pretrained 45M, need 1x LoRA + report","HF Course FREE","Todo"],
+[3,"RAG Systems","✅ <a href='https://github.com/Rythamo8055/docuqa-rag' target='_blank'>docuqa: hybrid RRF+rerank 96%</a> + aegis Chroma + breachkit 48-doc","DL.AI shorts FREE","Done"],
+[4,"Evals + LLM Deploy","✅ aegis 60 golden (86.7%/0 viol) + <a href='https://github.com/Rythamo8055/breachkit-redteam-lab' target='_blank'>breachkit 100%→0%</a> + <a href='https://github.com/Rythamo8055/genar-ai-safety-reporting' target='_blank'>genar judge</a>","MS Learn FREE / AI-102 $165","Done"],
+[5,"Data Engineering","🟨 <a href='https://github.com/Rythamo8055/genar-ai-safety-reporting' target='_blank'>genar 1068→1024 dedup</a> + cognodb graph. Missing warehouse","Databricks FREE badges","Doing"],
+[6,"Cloud + Security","🟨 <a href='https://github.com/Rythamo8055/breachkit-redteam-lab' target='_blank'>breachkit OWASP</a> + lolak audit. Missing AWS IAM/VPC","AWS Student FREE voucher","Doing"],
+[7,"Rapid Prototyping","✅ <a href='https://github.com/Rythamo8055/needle' target='_blank'>needle Tauri 17 tools</a> + GEMINI hackathon + live demos","Demo = cert","Done"],
+[8,"Communication/Writing","✅ PLAN.md+DEVLOG.md + RED_TEAM_REPORT.md + PADER reports","Google Tech Writing FREE","Done"],
+[9,"Listening / User loops","⚠️ GAP: add docs/feedback-log.md to aegis","Feedback log FREE","Todo"],
+[10,"Systems + Business ROI","⚠️ GAP: add docs/ROI.md to aegis (↓support 30%)","AWS CP Learn FREE","Todo"],
 ];
+const DEFAULTS={1:"Done",2:"Todo",3:"Done",4:"Done",5:"Doing",6:"Doing",7:"Done",8:"Done",9:"Todo",10:"Todo"};
 const KEY="fde-tracker-v1";
 function load(){try{return JSON.parse(localStorage.getItem(KEY)||"{}")}catch{return{}}}
 function save(s){localStorage.setItem(KEY,JSON.stringify(s))}
-function statusOf(i,store){return store[i]||"Todo"}
+function statusOf(i,store){return store[i]||DEFAULTS[i]||"Todo"}
 function render(){
 const q=(document.getElementById("q").value||"").toLowerCase();
 const f=document.getElementById("f").value;
@@ -162,7 +164,8 @@ const [n,skill,proj,cert]=r;
 const st=statusOf(n,store);
 if(st==="Done")done++;
 if(f&&st!==f)return;
-if(q&&!(skill+proj+cert).toLowerCase().includes(q))return;
+const plain=(skill+" "+proj.replace(/<[^>]*>/g," ")+" "+cert).toLowerCase();
+if(q&&!plain.includes(q))return;
 const cls=st==="Todo"?"todo":st==="Doing"?"doing":"done";
 const tr=document.createElement("tr");
 tr.innerHTML=`<td><input type="checkbox" class="check" ${st==="Done"?"checked":""} onchange="toggle(${n},this.checked)"/></td><td>${n}</td><td><b>${skill}</b></td><td>${proj}</td><td>${cert}</td><td><select onchange="setStatus(${n},this.value)"><option ${st==="Todo"?"selected":""}>Todo</option><option ${st==="Doing"?"selected":""}>Doing</option><option ${st==="Done"?"selected":""}>Done</option></select> <span class="pill ${cls}">${st}</span></td>`;
