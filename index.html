@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Forward Deployed Engineer — Prep Tracker</title>
+<meta name="description" content="FDE job-readiness tracker: required skills, real-world projects, certificates + session dev log. Based on IIT Forward Deployed Engineer guide." />
+<style>
+:root{--bg:#0b1220;--card:#111c33;--muted:#8ea0c2;--text:#eaf0ff;--accent:#4da3ff;--green:#22c55e;--yellow:#eab308;--border:#24365c}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;background:linear-gradient(180deg,#0b1220,#0e1730);color:var(--text)}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1100px;margin:0 auto;padding:24px}
+.hero{background:linear-gradient(135deg,#13244a,#1b3a7a);border:1px solid var(--border);border-radius:16px;padding:28px;margin:16px 0}
+.hero h1{margin:0 0 8px;font-size:32px}.hero p{margin:6px 0;color:#c9d6f2}
+.badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.badge{background:#0b1530;border:1px solid var(--border);padding:6px 10px;border-radius:999px;font-size:13px;color:#cfe0ff}
+.btns{margin-top:16px;display:flex;gap:10px;flex-wrap:wrap}.btn{background:var(--accent);color:#06122b;font-weight:700;padding:10px 16px;border-radius:10px;border:0;cursor:pointer}.btn.secondary{background:transparent;color:var(--text);border:1px solid var(--border)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}@media(max-width:800px){.grid{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px}
+.card h2{margin:0 0 10px;font-size:20px}.card h3{margin:16px 0 8px;font-size:16px}
+.muted{color:var(--muted);font-size:14px}
+table{width:100%;border-collapse:collapse;font-size:14px;background:#0d1730;border-radius:10px;overflow:hidden}
+th,td{text-align:left;padding:10px;border-bottom:1px solid var(--border);vertical-align:top}
+th{background:#162754;color:#dbe7ff;position:sticky;top:0}
+tr:hover td{background:#12203f}
+.pill{display:inline-block;padding:2px 8px;border-radius:999px;font-size:12px;border:1px solid var(--border)}
+.todo{background:#3a2f0b;color:#fde68a;border-color:#6b5a1f}.doing{background:#0e3a5a;color:#bae6fd}.done{background:#0d3b26;color:#bbf7d0}
+.progress{height:10px;background:#1e2d55;border-radius:999px;overflow:hidden;margin:10px 0}.progress>div{height:100%;background:linear-gradient(90deg,var(--accent),#7dd3fc);width:0%}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+input,select{background:#0b1530;border:1px solid var(--border);color:var(--text);padding:8px 10px;border-radius:8px}
+footer{color:var(--muted);font-size:13px;margin:24px 0;text-align:center}
+code{background:#0b1530;padding:2px 6px;border-radius:6px;border:1px solid var(--border)}
+.check{transform:scale(1.2)}
+.kpi{display:flex;gap:12px;flex-wrap:wrap;margin:12px 0}.kpi .k{background:#0b1530;border:1px solid var(--border);border-radius:12px;padding:10px 14px;min-width:140px}.k b{font-size:22px;display:block}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="hero">
+<div class="muted">Rythamo8055 / forward-deployed-engineer • GitHub Pages Tracker</div>
+<h1>Forward Deployed Engineer — Prep & Build Log</h1>
+<p>Based on <a href="https://www.iit.edu/blog/forward-deployed-engineer" target="_blank" rel="noopener">IIT: What Is a Forward Deployed Engineer? — Petra Kelly</a></p>
+<p class="muted">FDE = 1 customer × many capabilities. Part SWE + Solutions Architect + Consultant + Startup CTO. Mission: close the gap between “cool AI demo” and “AI that reliably does the job”.</p>
+<div class="badges">
+<span class="badge">🔗 Source: IIT Blog</span>
+<span class="badge">📊 Skills → Projects → Certs</span>
+<span class="badge">🧪 Doing the job before you get the job</span>
+<span class="badge">📝 Session Dev Log</span>
+</div>
+<div class="btns">
+<a class="btn" href="https://github.com/Rythamo8055/forward-deployed-engineer" target="_blank" rel="noopener">View on GitHub</a>
+<a class="btn secondary" href="https://www.iit.edu/blog/forward-deployed-engineer" target="_blank" rel="noopener">Read IIT Guide ↗</a>
+<a class="btn secondary" href="#tracker">Jump to tracker ↓</a>
+</div>
+<div class="kpi">
+<div class="k"><span class="muted">Overall progress</span><b id="pct">0%</b><div class="progress"><div id="bar"></div></div><span class="muted" id="counts">0 / 10 done</span></div>
+<div class="k"><span class="muted">Projects shipped</span><b id="projDone">0 / 5</b><span class="muted">RAG • Data • Full-stack • Fine-tune • Sprint</span></div>
+<div class="k"><span class="muted">Certs target</span><b>3</b><span class="muted">Cloud + AI + Data</span></div>
+</div>
+</div>
+
+<div class="grid">
+<div class="card">
+<h2>📌 What is an FDE?</h2>
+<p class="muted">Coined by Palantir (ex-Deltas). Military analogy: deployed forward, close to action.</p>
+<ul>
+<li><b>Embed:</b> on-site ~25-50%, map domain & processes</li>
+<li><b>Build:</b> production code in customer infra — RAG, fine-tune, evals, data wiring</li>
+<li><b>Feed back:</b> customer fix → core product (ex: OpenAI + John Deere → Realtime API)</li>
+</ul>
+<p class="muted">Examples: John Deere + OpenAI (Iowa), Ramp pods, Matta factory floor, AWS NFL Fantasy AI / NFL IQ, NBA, Cox Auto, Southwest.</p>
+</div>
+<div class="card">
+<h2>🔥 Why hottest job 2026?</h2>
+<ul>
+<li>95% enterprise AI pilots fail (MIT 2025) — siloed data</li>
+<li>a16z: enterprises = “grandma getting an iPhone” — need setup</li>
+<li>&gt;50% tech postings need AI/ML, 84% orgs ↑ AI spend</li>
+<li>“FDEs, not FTEs” — Andela</li>
+</ul>
+<h3>FDE vs others</h3>
+<p class="muted"><b>Solutions Eng:</b> advisory PoC, rarely prod code • <b>AI Eng:</b> builds AI, not embedded • <b>FDE:</b> embedded + prod code + back to core product</p>
+</div>
+</div>
+
+<div class="card" id="tracker" style="margin-top:16px">
+<h2>🎯 Master Tracker — Skills → Projects → Certificates</h2>
+<p class="muted">Tick = saved in this browser (localStorage). Source of truth stays in <code>README.md</code> — update both each session. Filter by status:</p>
+<div class="toolbar">
+<input id="q" placeholder="Search skill / project / cert..." oninput="render()" style="flex:1;min-width:200px" />
+<select id="f" onchange="render()"><option value="">All status</option><option>Todo</option><option>Doing</option><option>Done</option></select>
+<button class="btn secondary" onclick="resetAll()">Reset ticks</button>
+<button class="btn secondary" onclick="markAllDone(false)">Copy README checklist ↓</button>
+</div>
+<div style="overflow:auto">
+<table>
+<thead><tr><th>✓</th><th>#</th><th>Required Skill</th><th>Real-World Project</th><th>Certificate</th><th>Status</th></tr></thead>
+<tbody id="tbody"></tbody>
+</table>
+</div>
+<p class="muted" id="readmeCopy" style="white-space:pre-wrap;background:#0b1530;border:1px solid var(--border);border-radius:10px;padding:12px;display:none"></p>
+</div>
+
+<div class="grid" style="margin-top:16px">
+<div class="card">
+<h2>🏆 Minimal Cert Shortlist</h2>
+<ol>
+<li><b>AWS Solutions Architect – Associate</b> — cloud + deploy</li>
+<li><b>AWS ML Specialty</b> OR <b>Azure AI-102</b> — RAG / evals / LLM</li>
+<li><b>Databricks Data Engineer Assoc.</b> OR <b>GCP Data Engineer</b> — data is moat</li>
+</ol>
+<p class="muted">Portfolio &gt; certs: 3-4 production-ready builds beat 10 certs.</p>
+</div>
+<div class="card">
+<h2>🗺️ Roadmap</h2>
+<p class="muted">Phase 0: Setup ✓ • Phase 1: Full-stack + Cloud • Phase 2: Data • Phase 3: RAG/Evals/Fine-tune • Phase 4: Customer sims + ROI • Phase 5: Cert + resume</p>
+<p>Code layout: <code>/projects</code> <code>/docs</code> <code>/certs</code> <code>/sessions</code></p>
+<p><a href="https://github.com/Rythamo8055/forward-deployed-engineer/tree/main/projects" target="_blank">Browse /projects ↗</a> • <a href="https://github.com/Rythamo8055/forward-deployed-engineer/tree/main/sessions" target="_blank">/sessions ↗</a></p>
+</div>
+</div>
+
+<div class="card" style="margin-top:16px">
+<h2>🧪 Dev Log — What we’re doing & what happened</h2>
+<p class="muted">Newest on top. Edit <code>README.md</code> + <code>/sessions/Sxx.md</code> each session.</p>
+<div style="overflow:auto">
+<table>
+<thead><tr><th>Date</th><th>Session</th><th>Planned</th><th>Did</th><th>Learnings / Links</th><th>Next</th></tr></thead>
+<tbody>
+<tr><td>2026-09-07</td><td>S01</td><td>Repo setup + analyze IIT blog</td><td>Created README + Pages dashboard, added weblink, skills/projects/certs table, dev log</td><td>FDE=1 cust×many caps; 95% pilots fail; demo≠deploy</td><td>Pick P01 stack, scaffold /projects/01</td></tr>
+<tr><td>YYYY-MM-DD</td><td>S02</td><td><i>template — copy row</i></td><td></td><td></td><td></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<footer>Maintained as living doc • Source: <a href="https://www.iit.edu/blog/forward-deployed-engineer">IIT FDE Guide</a> • Repo: <a href="https://github.com/Rythamo8055/forward-deployed-engineer">Rythamo8055/forward-deployed-engineer</a> • Pages: <a href="https://rythamo8055.github.io/forward-deployed-engineer/">live dashboard</a></footer>
+</div>
+<script>
+const DATA=[
+[1,"Full-Stack SWE Fundamentals","Customer Co-Build Starter: ticket-triage app, Docker + CI/CD","Meta Full-Stack / AWS Developer Assoc."],
+[2,"Applied AI: Fine-tuning","Fine-tune Llama/Mistral on domain docs (John Deere-style) + eval report","HF Course / DeepLearning.AI Fine-tuning"],
+[3,"RAG Systems","RAG over PDFs/CSVs (NFL rules / factory SOPs) + citations","DeepLearning.AI LangChain + AWS ML Specialty"],
+[4,"Evals + LLM Deploy","Eval harness: accuracy/hallucination/latency, FastAPI + Bedrock/vLLM","Azure AI-102 + DeepEval practice"],
+[5,"Data Engineering","Siloed-Data Unifier: 3 sources → warehouse + quality docs","Databricks Assoc. / GCP Data Engineer"],
+[6,"Cloud + Security","Deploy RAG on AWS: IAM/VPC/Secrets/logging + threat model","AWS SAA + Security Specialty"],
+[7,"Rapid Prototyping","48-h Sprint: PoC + demo video + feedback loop","Demo video = cert"],
+[8,"Communication/Writing","1-pager + ADR + demo script per project in /docs","Google Tech Writing"],
+[9,"Listening / User loops","Factory-floor sim: 2-3 interviews, 2 iterations + log","IDEO Design Thinking (opt)"],
+[10,"Systems + Business ROI","Ramp-pod sim: own KPI (↓support 30%), ROI doc","AWS CP + PSM I (opt)"],
+];
+const KEY="fde-tracker-v1";
+function load(){try{return JSON.parse(localStorage.getItem(KEY)||"{}")}catch{return{}}}
+function save(s){localStorage.setItem(KEY,JSON.stringify(s))}
+function statusOf(i,store){return store[i]||"Todo"}
+function render(){
+const q=(document.getElementById("q").value||"").toLowerCase();
+const f=document.getElementById("f").value;
+const store=load();
+const tb=document.getElementById("tbody");tb.innerHTML="";
+let done=0;
+DATA.forEach(r=>{
+const [n,skill,proj,cert]=r;
+const st=statusOf(n,store);
+if(st==="Done")done++;
+if(f&&st!==f)return;
+if(q&&!(skill+proj+cert).toLowerCase().includes(q))return;
+const cls=st==="Todo"?"todo":st==="Doing"?"doing":"done";
+const tr=document.createElement("tr");
+tr.innerHTML=`<td><input type="checkbox" class="check" ${st==="Done"?"checked":""} onchange="toggle(${n},this.checked)"/></td><td>${n}</td><td><b>${skill}</b></td><td>${proj}</td><td>${cert}</td><td><select onchange="setStatus(${n},this.value)"><option ${st==="Todo"?"selected":""}>Todo</option><option ${st==="Doing"?"selected":""}>Doing</option><option ${st==="Done"?"selected":""}>Done</option></select> <span class="pill ${cls}">${st}</span></td>`;
+tb.appendChild(tr);
+});
+const pct=Math.round(done/DATA.length*100);
+document.getElementById("pct").textContent=pct+"%";
+document.getElementById("bar").style.width=pct+"%";
+document.getElementById("counts").textContent=`${done} / ${DATA.length} done`;
+document.getElementById("projDone").textContent=`${Math.min(done,5)} / 5`;
+}
+function toggle(n,checked){const s=load();s[n]=checked?"Done":"Todo";save(s);render()}
+function setStatus(n,v){const s=load();s[n]=v;save(s);render()}
+function resetAll(){localStorage.removeItem(KEY);render()}
+function markAllDone(show=true){const s=load();let md="| # | Skill | Project | Cert | Status |\n|---|---|---|---|---|\n";DATA.forEach(r=>{const st=statusOf(r[0],s);md+=`| ${r[0]} | ${r[1]} | ${r[2]} | ${r[3]} | ${st} |\n`});const el=document.getElementById("readmeCopy");el.style.display="block";el.textContent=md;}
+render();
+</script>
+</body>
+</html>
