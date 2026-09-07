@@ -91,8 +91,9 @@ This is our job-readiness tracker. Check off as we build.
 
 | Date | Session # | What We Planned | What We Did | Key Learnings / Links | Next Up |
 |------|-----------|-----------------|-------------|-----------------------|---------|
+| 2026-09-07 | S02 | Push to GitHub + Pages tracker | Created public repo, pushed 5 files, enabled Pages (legacy/main-root), set homepage, verified 200 live | Pages build `built` in ~1min; live dashboard persists ticks via localStorage | Pick Project #1 stack, scaffold `/projects/01-fullstack-starter` |
 | 2026-09-07 | S01 | Repo setup + analyze IIT FDE blog | Created this README, added weblink, extracted skills/projects/certs table, initialized dev log | FDE = 1 customer x many capabilities; AI easy to demo hard to deploy; 95% pilots fail | Pick Project #1 stack, create `/projects/01-fullstack-starter` + `/docs` |
-| YYYY-MM-DD | S02 | _template - copy this row_ | | | |
+| YYYY-MM-DD | S03 | _template - copy this row_ | | | |
 
 ### How to use this log
 - `What We Planned` = goal before session
